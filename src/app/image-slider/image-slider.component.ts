@@ -27,11 +27,10 @@ export class ImageSliderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // Call goToSlide every 2 seconds
-    const timer = interval(3000);
-
-    timer.pipe(takeUntil(this.sub$)).subscribe(() => {
-      this.goToNextSlide();
-    });
+    // const timer = interval(3000);
+    // timer.pipe(takeUntil(this.sub$)).subscribe(() => {
+    //   this.goToNextSlide();
+    // });
   }
   goToNextSlide(): void {
     this.currentIndex = (this.currentIndex + 1) % this.slides.length;

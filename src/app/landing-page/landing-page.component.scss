@@ -1,0 +1,40 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/components/button";
+@import "../../styles/base/typography";
+
+.landing {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.landing__logo {
+  width: 35%;
+  margin-left: 30%;
+  margin-bottom: 5%;
+}
+
+.landing__content {
+  display: flex;
+  gap: 20rem;
+  align-items: center;
+}
+
+.landing__content--auth {
+  max-width: 25vw;
+}
+
+.landing__content--buttons {
+  display: flex;
+  gap: 3rem;
+}
+
+.heading-tertiary {
+  margin-bottom: 5rem;
+}
+
+.tournament-banner {
+  width: 95%;
+  margin-top: 5rem;
+}

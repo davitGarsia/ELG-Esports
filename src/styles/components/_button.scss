@@ -1,0 +1,45 @@
+@import "../../styles/abstracts/variables";
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    padding: 1.3rem 4.5rem;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s;
+    font-size: $default-font-size;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--lime {
+    background-color: $color-primary;
+    color: $color-black;
+  }
+
+  &--transparent {
+    padding: 1.2rem 4.4rem;
+    background-color: transparent;
+    border: 1px solid $color-white;
+    color: $color-white;
+  }
+}
