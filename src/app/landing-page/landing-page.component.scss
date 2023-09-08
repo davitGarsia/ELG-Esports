@@ -50,16 +50,17 @@
   justify-content: flex-start;
 }
 
-.paragraph {
+.paragraph--underline {
   font-size: 2rem;
+  color: $color-white;
   margin-top: 10rem;
   margin: 8rem;
 }
 
-.paragraph::after {
+.paragraph--underline::after {
   content: "";
   display: block;
-  width: 25%;
+  width: 100px;
   height: 7px;
   background-color: $color-primary;
   border-radius: 5px;
@@ -79,5 +80,23 @@
 .games {
   outline: 1px solid $color-grey-dark;
   outline-offset: 15px;
+  border-radius: 3px;
+}
+
+.grid {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  row-gap: 7rem;
+}
+
+.step {
+  text-align: center;
+  width: 30rem;
+  outline: 1px solid $color-grey-dark;
+  outline-offset: 5px;
   border-radius: 3px;
 }
