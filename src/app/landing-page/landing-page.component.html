@@ -26,3 +26,15 @@
     </div>
   </div>
 </section>
+<section class="suggested">
+  <div class="suggested__paragraph">
+    <p class="paragraph">თამაშები, რომლებსაც ჩვენ ვუჭერთ მხარს</p>
+    <div class="dash">-</div>
+  </div>
+
+  <div class="suggested__games">
+    <div class="games" *ngFor="let game of games; let i = index">
+      <img [src]="game.url" />
+    </div>
+  </div>
+</section>

@@ -35,6 +35,49 @@
 }
 
 .tournament-banner {
-  width: 95%;
+  width: 120%;
   margin-top: 5rem;
+}
+
+.suggested {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.suggested__paragraph {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.paragraph {
+  font-size: 2rem;
+  margin-top: 10rem;
+  margin: 8rem;
+}
+
+.paragraph::after {
+  content: "";
+  display: block;
+  width: 25%;
+  height: 7px;
+  background-color: $color-primary;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.suggested__games {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  row-gap: 7rem;
+}
+
+.games {
+  outline: 1px solid $color-grey-dark;
+  outline-offset: 15px;
+  border-radius: 3px;
 }
