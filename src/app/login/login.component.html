@@ -1,19 +1,19 @@
 <section class="form__section">
   <div class="form--container">
     <img src="../../assets/logos/elg-logo.png" />
-    <form [formGroup]="registerFormGroup" (ngSubmit)="onSubmit()" class="form">
+    <form [formGroup]="loginFormGroup" (ngSubmit)="onSubmit()" class="form">
       <label class="label" for="email"> ელ-ფოსტა </label>
       <input class="form__input" type="email" formControlName="email" />
       <span
         *ngIf="
-          !registerFormGroup.get('email')?.valid &&
-          registerFormGroup.get('email')?.touched &&
-          !registerFormGroup.get('email')?.dirty
+          !loginFormGroup.get('email')?.valid &&
+          loginFormGroup.get('email')?.touched &&
+          !loginFormGroup.get('email')?.dirty
         "
         class="para-mini"
         >გთხოვთ მიუთითეთ მეილი
       </span>
-      <span *ngIf="registerFormGroup.get('email')?.errors?.['pattern']" class=""
+      <span *ngIf="loginFormGroup.get('email')?.errors?.['pattern']" class=""
         >გთხოვთ, ჩაწეროთ ვალიდური მეილი</span
       >
 
@@ -31,17 +31,22 @@
       </div>
       <span
         *ngIf="
-          !registerFormGroup.get('password')?.valid &&
-          registerFormGroup.get('password')?.touched &&
-          !registerFormGroup.get('password')?.dirty
+          !loginFormGroup.get('password')?.valid &&
+          loginFormGroup.get('password')?.touched &&
+          !loginFormGroup.get('password')?.dirty
         "
         class="para-mini"
       ></span>
 
-      <button class="btn btn--transparent">ავტორიზაცია</button>
+      <button
+        class="btn btn--transparent"
+        [disabled]="!this.loginFormGroup.valid"
+      >
+        ავტორიზაცია
+      </button>
       <hr class="hr" />
 
-      <button class="btn btn--lime">რეგისტრაცია</button>
+      <button class="btn btn--lime" (click)="toRegister()">რეგისტრაცია</button>
 
       <p class="para-mini">
         By signing in or creating an account, you agree to our Terms and

@@ -51,7 +51,13 @@
       </span>
 
       <button class="btn btn--lime">რეგისტრაცია</button>
-      <button class="btn btn--transparent">ავტორიზაცია</button>
+      <button
+        class="btn btn--transparent"
+        [disabled]="!this.registerFormGroup.valid"
+        (click)="toLogin()"
+      >
+        ავტორიზაცია
+      </button>
       <hr class="hr" />
 
       <p class="para-mini">
