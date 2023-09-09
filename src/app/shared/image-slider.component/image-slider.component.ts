@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SlideInterface } from '../../core/interfaces/slide.interface';
 import { Subject, Subscription, interval, take, takeUntil } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-image-slider',
@@ -8,6 +9,8 @@ import { Subject, Subscription, interval, take, takeUntil } from 'rxjs';
   styleUrls: ['./image-slider.component.scss'],
 })
 export class ImageSliderComponent implements OnInit, OnDestroy {
+  constructor(private router: Router) {}
+
   slides: SlideInterface[] = [
     { url: '../../assets/slider-images/slider-1.png', title: 'slider-1' },
     { url: '../../assets/slider-images/slider-2.png', title: 'slider-2' },
@@ -39,5 +42,13 @@ export class ImageSliderComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.sub$.next(null);
     this.sub$.complete();
+  }
+
+  toLogin() {
+    this.router.navigate(['/login']);
+  }
+
+  toRegister() {
+    this.router.navigate(['/register']);
   }
 }

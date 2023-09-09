@@ -25,8 +25,16 @@
         ტურნირებს.
       </p>
       <div class="landing__content--buttons">
-        <button class="btn btn--transparent">ავტორიზაცია</button>
-        <button class="btn btn--lime">რეგისტრაცია</button>
+        <button
+          class="btn btn--transparent"
+          (click)="toLogin()"
+          routerLinkActive="router-link-active"
+        >
+          ავტორიზაცია
+        </button>
+        <button class="btn btn--lime" (click)="toRegister()">
+          რეგისტრაცია
+        </button>
       </div>
     </div>
     <div class="landing__content--tournaments">

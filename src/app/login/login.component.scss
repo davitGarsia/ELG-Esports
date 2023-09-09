@@ -1,0 +1,80 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/components/button";
+@import "../../styles/components/form-input";
+
+.form__section {
+  background-image: url(../../assets/backgrounds/background-1.png);
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.form--container {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 4rem 5rem 4rem;
+  background-color: $color-black-light;
+  border: 1px solid $color-grey-dark-3;
+  border-radius: 3px;
+}
+
+.form {
+  width: 22vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  height: 4.2rem;
+  border-radius: 1px;
+  margin-top: 1rem;
+
+  &--transparent {
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    margin-bottom: 1rem;
+  }
+}
+
+.para-mini {
+  color: $color-grey-dark-2;
+  font-size: 1rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+.label {
+  color: $color-grey-light-1;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $color-grey-dark;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.password {
+  position: relative;
+}
+
+.show--password {
+  font-size: 1.3rem;
+  color: $color-white;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  cursor: pointer;
+  color: $color-grey-dark-3;
+}

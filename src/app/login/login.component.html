@@ -1,1 +1,58 @@
-<p>login works!</p>
+<section class="form__section">
+  <div class="form--container">
+    <img src="../../assets/logos/elg-logo.png" />
+    <form [formGroup]="registerFormGroup" (ngSubmit)="onSubmit()" class="form">
+      <label class="label" for="email"> ელ-ფოსტა </label>
+      <input class="form__input" type="email" formControlName="email" />
+      <span
+        *ngIf="
+          !registerFormGroup.get('email')?.valid &&
+          registerFormGroup.get('email')?.touched &&
+          !registerFormGroup.get('email')?.dirty
+        "
+        class="para-mini"
+        >გთხოვთ მიუთითეთ მეილი
+      </span>
+      <span *ngIf="registerFormGroup.get('email')?.errors?.['pattern']" class=""
+        >გთხოვთ, ჩაწეროთ ვალიდური მეილი</span
+      >
+
+      <label class="label" for="password"> პაროლი </label>
+
+      <div class="password">
+        <input
+          class="form__input"
+          [type]="visible ? 'text' : 'password'"
+          formControlName="password"
+        />
+        <p (click)="togglePasswordVisibility()" class="show--password">
+          {{ visible ? "პაროლის დამალვა" : "პაროლის გამოჩენა" }}
+        </p>
+      </div>
+      <span
+        *ngIf="
+          !registerFormGroup.get('password')?.valid &&
+          registerFormGroup.get('password')?.touched &&
+          !registerFormGroup.get('password')?.dirty
+        "
+        class="para-mini"
+      ></span>
+
+      <button class="btn btn--transparent">ავტორიზაცია</button>
+      <hr class="hr" />
+
+      <button class="btn btn--lime">რეგისტრაცია</button>
+
+      <p class="para-mini">
+        By signing in or creating an account, you agree to our Terms and
+        Conditions & Privacy Policy. We need this information to be able to
+        contact you and to prevent cheating or fraud.
+      </p>
+
+      <p class="para-mini">
+        This site is protected by reCAPTCHA and the Google Privacy Policy and
+        Terms of Service apply.
+      </p>
+    </form>
+  </div>
+</section>
