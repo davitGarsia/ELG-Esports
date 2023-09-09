@@ -1,3 +1,7 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/components/button";
+@import "../../styles/base/typography";
+
 .slide {
   width: 100%;
   height: 100%;
@@ -26,4 +30,35 @@
 
 .dot.active {
   color: #16b12b;
+}
+
+.landing {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.landing__content {
+  display: flex;
+  gap: 20rem;
+  align-items: center;
+}
+
+.landing__content--auth {
+  max-width: 25vw;
+}
+
+.landing__content--buttons {
+  display: flex;
+  gap: 3rem;
+}
+
+.heading-tertiary {
+  margin-bottom: 5rem;
+}
+
+.tournament-banner {
+  width: 120%;
+  margin-top: 5rem;
 }
