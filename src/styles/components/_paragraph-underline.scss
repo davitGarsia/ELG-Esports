@@ -1,0 +1,16 @@
+.paragraph--underline {
+  font-size: 2rem;
+  color: $color-white;
+  margin-top: 10rem;
+  margin: 8rem;
+}
+
+.paragraph--underline::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 7px;
+  background-color: $color-primary;
+  border-radius: 5px;
+  margin-top: 5px;
+}

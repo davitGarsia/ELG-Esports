@@ -1,0 +1,43 @@
+@import "../../../styles/abstracts/variables";
+@import "../../../styles/components/paragraph-underline";
+
+.footer {
+  margin-top: 20rem;
+  margin-bottom: 10rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.paragraph--underline {
+  margin: 0;
+}
+
+.flex--column--logo {
+  width: 50%;
+}
+
+.flex--column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 18%;
+}
+
+.paragraph--small {
+  color: $color-white;
+}
+
+.flex--row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.col-1 {
+  width: 15%;
+  margin-right: 5%;
+}

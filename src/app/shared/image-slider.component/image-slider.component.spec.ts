@@ -8,7 +8,7 @@ describe('ImageSliderComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ImageSliderComponent]
+      declarations: [ImageSliderComponent],
     });
     fixture = TestBed.createComponent(ImageSliderComponent);
     component = fixture.componentInstance;

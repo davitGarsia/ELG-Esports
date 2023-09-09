@@ -1,5 +1,6 @@
 @import "../../styles/abstracts/variables";
 @import "../../styles/components/button";
+@import "../../styles/components/paragraph-underline";
 @import "../../styles/base/typography";
 
 .landing__logo {
@@ -21,22 +22,22 @@
   justify-content: flex-start;
 }
 
-.paragraph--underline {
-  font-size: 2rem;
-  color: $color-white;
-  margin-top: 10rem;
-  margin: 8rem;
-}
+// .paragraph--underline {
+//   font-size: 2rem;
+//   color: $color-white;
+//   margin-top: 10rem;
+//   margin: 8rem;
+// }
 
-.paragraph--underline::after {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 7px;
-  background-color: $color-primary;
-  border-radius: 5px;
-  margin-top: 5px;
-}
+// .paragraph--underline::after {
+//   content: "";
+//   display: block;
+//   width: 100px;
+//   height: 7px;
+//   background-color: $color-primary;
+//   border-radius: 5px;
+//   margin-top: 5px;
+// }
 
 .suggested__games {
   margin-left: 5%;
@@ -75,7 +76,7 @@
   outline-offset: 5px;
   border-radius: 3px;
   cursor: pointer;
-  transition: all 0.3s ease-in;
+  transition: all 0.5s ease-in;
 
   .heading-primary--main {
     font-size: 3rem;
@@ -111,6 +112,13 @@
   width: 90%;
   text-align: center;
   margin-bottom: 1rem;
+}
+
+.partners {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
 }
 
 .partners__logo:not(:nth-child(5)) {

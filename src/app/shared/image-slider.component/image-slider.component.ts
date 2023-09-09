@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { SlideInterface } from '../core/interfaces/slide.interface';
+import { SlideInterface } from '../../core/interfaces/slide.interface';
 import { Subject, Subscription, interval, take, takeUntil } from 'rxjs';
 
 @Component({
