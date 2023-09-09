@@ -1,0 +1,30 @@
+<div class="register">
+  <img src="../../assets/logos/elg-logo.png" />
+  <form [formGroup]="registerFormGroup" (ngSubmit)="onSubmit()">
+    <label class="" for="email"> ელ-ფოსტა </label>
+    <input type="email" formControlName="email" />
+    <span
+      *ngIf="
+        !registerFormGroup.get('email')?.valid &&
+        registerFormGroup.get('email')?.touched &&
+        !registerFormGroup.get('email')?.dirty
+      "
+      class=""
+      >გთხოვთ მიუთითეთ მეილი
+    </span>
+    <span *ngIf="registerFormGroup.get('email')?.errors?.['pattern']" class=""
+      >გთხოვთ, ჩაწეროთ ვალიდური მეილი</span
+    >
+
+    <label class="" for="password"> პაროლი </label>
+    <input type="password" formControlName="password" />
+    <span
+      *ngIf="
+        !registerFormGroup.get('password')?.valid &&
+        registerFormGroup.get('password')?.touched &&
+        !registerFormGroup.get('password')?.dirty
+      "
+      class=""
+    ></span>
+  </form>
+</div>
