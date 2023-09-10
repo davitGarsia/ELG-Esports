@@ -1,0 +1,15 @@
+<div class="teams">
+  <p class="paragraph--underline">საიტზე რეგისტრირებული გუნდები</p>
+  <div class="grid">
+    <div class="card" *ngFor="let team of teams; let i = index">
+      <img class="img" [src]="team.image" />
+      <p class="paragraph">{{ team.title }}</p>
+      <p class="para-sm">{{ team.numMembers }}</p>
+      <button class="btn btn--transparent" [routerLink]="['/main/teams', i]">
+        გუნდის ნახვა
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>
