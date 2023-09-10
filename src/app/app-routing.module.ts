@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { MainLayoutModule } from './main-layout/main-layout.module';
 
 const routes: Routes = [
   {
@@ -16,6 +17,13 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'main',
+    loadChildren: () =>
+      import('../app/main-layout/main-layout.module').then(
+        (m) => m.MainLayoutModule
+      ),
   },
 ];
 

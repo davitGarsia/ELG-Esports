@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedModule } from './shared/shared.module';
+//import { MainLayoutModule } from './main-layout/main-layout.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     LoginComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SharedModule,
+    ReactiveFormsModule,
+    //  MainLayoutModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Games } from '../core/interfaces/games.interface';
 
 @Component({

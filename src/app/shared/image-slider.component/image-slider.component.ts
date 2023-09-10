@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { SlideInterface } from '../../core/interfaces/slide.interface';
 import { Subject, Subscription, interval, take, takeUntil } from 'rxjs';
 import { Router } from '@angular/router';
@@ -11,17 +11,22 @@ import { Router } from '@angular/router';
 export class ImageSliderComponent implements OnInit, OnDestroy {
   constructor(private router: Router) {}
 
-  slides: SlideInterface[] = [
-    { url: '../../assets/slider-images/slider-1.png', title: 'slider-1' },
-    { url: '../../assets/slider-images/slider-2.png', title: 'slider-2' },
-    { url: '../../assets/slider-images/slider-3.png', title: 'slider-3' },
-  ];
+  @Input() slides!: string[];
+
+  // slides: SlideInterface[] = [
+  //   {
+  //     url: '../../assets/slider-images/slider-1.png',
+  //     title: 'slider-1',
+  //   },
+  //   { url: '../../assets/slider-images/slider-2.png', title: 'slider-2' },
+  //   { url: '../../assets/slider-images/slider-3.png', title: 'slider-3' },
+  // ];
 
   currentIndex: number = 0;
   sub$ = new Subject();
 
   getCurrentSlideUrl() {
-    return `url('${this.slides[this.currentIndex].url}')`;
+    return `url('${this.slides[this.currentIndex]}')`;
   }
 
   goToSlide(slideIndex: number): void {
@@ -34,6 +39,7 @@ export class ImageSliderComponent implements OnInit, OnDestroy {
     // timer.pipe(takeUntil(this.sub$)).subscribe(() => {
     //   this.goToNextSlide();
     // });
+    console.log(this.slides);
   }
   goToNextSlide(): void {
     this.currentIndex = (this.currentIndex + 1) % this.slides.length;
