@@ -1,0 +1,76 @@
+<div class="tournaments">
+  <div class="flex">
+    <img class="rules" src="../../../assets/home/rules.png" />
+
+    <div class="">
+      <div class="current">
+        <div class="">
+          <p class="paragraph">მიმდინარეობს</p>
+          <p class="heading-tertiary">
+            CS:GO <span class="color-main">ELG</span> Community Cup #1
+          </p>
+        </div>
+
+        <div class="">
+          <p class="paragraph"><span class="color-main">ELG</span> CS:GO</p>
+          <p class="heading-tertiary">
+            CS:GO <span class="color-main">ELG</span> Community Cup #1 - Georgia
+          </p>
+          <p class="paragraph--small">5 აგვისტო / დაწყების დრო 21:00 +5</p>
+
+          <div class="flex margin-modify">
+            <div class="flex--col">
+              <p class="paragraph">საპრიზო თანხა</p>
+              <div class="flex">
+                <img src="../../../assets/home/trophy-solid.png" />
+                <p class="paragraph">150₾</p>
+              </div>
+            </div>
+
+            <div class="flex--col">
+              <p class="paragraph">ტურნირის ლოკაცია</p>
+              <div class="flex">
+                <img src="../../../assets/home/Vector.png" />
+                <p class="paragraph">150₾</p>
+              </div>
+            </div>
+
+            <div class="flex--col">
+              <p class="paragraph">რეგისტრირებული გუნდები</p>
+              <div class="flex">
+                <img src="../../../assets/home/users-solid.png" />
+                <p class="paragraph">150₾</p>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn--transparent">მეტის ნახვა</button>
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="flex">
+          <div class="image-1">
+            <button class="btn btn--transparent">გუნდის რეგისტრაცია</button>
+          </div>
+          <div class="image-2">
+            <button class="btn btn--transparent">ჩვენი Youtube არხი</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="news">
+  <p class="paragraph--underline">ახალი ამბები</p>
+  <div class="grid">
+    <div class="card" *ngFor="let info of news">
+      <img class="img" src="{{ info.image }}" />
+      <div class="text">
+        <p class="para-sm">{{ info.tag }}</p>
+        <p class="paragraph">{{ info.title }}</p>
+        <p class="para-sm">{{ info.content }}</p>
+        <p class="para-sm">{{ info.author }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

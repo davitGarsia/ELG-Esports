@@ -5,9 +5,11 @@ import { SharedModule } from '../shared/shared.module';
 
 import { MainLayoutRoutingModule } from './main-layout-routing.module';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { HomeComponent } from './home/home.component';
+import { TournamentsComponent } from './tournaments/tournaments.component';
 
 @NgModule({
-  declarations: [MainLayoutComponent],
+  declarations: [MainLayoutComponent, HomeComponent, TournamentsComponent],
   imports: [CommonModule, MainLayoutRoutingModule, SharedModule],
 })
 export class MainLayoutModule {}

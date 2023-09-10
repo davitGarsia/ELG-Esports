@@ -1,0 +1,47 @@
+@import "../../../styles/abstracts/variables";
+
+p {
+  font-size: 5rem;
+  color: white;
+}
+
+.header {
+  margin: 1.5% 3% 0% 7%;
+}
+
+.header__flex {
+  display: flex;
+  gap: 70%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--col {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.header__link {
+  font-size: 1.5rem;
+  color: $color-white;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.header__logo {
+  width: 7rem;
+}
+
+.active {
+  color: $color-black;
+  background-color: $color-primary;
+  transform: skewX(-15deg);
+  padding: 1rem 2rem 1rem 2rem;
+}

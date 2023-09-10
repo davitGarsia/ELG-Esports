@@ -1,0 +1,32 @@
+<header class="header">
+  <div class="header__flex">
+    <div class="flex--col">
+      <a><img class="header__logo" [src]="logo" /></a>
+      <a
+        class="header__link"
+        [routerLink]="['/main/home']"
+        routerLinkActive="active"
+      >
+        მთავარი
+      </a>
+      <a class="header__link" [routerLink]="['']" routerLinkActive="active"
+        >ტურნირები</a
+      >
+      <a class="header__link" [routerLink]="['']" routerLinkActive="active"
+        >კალენდარი</a
+      >
+      <a class="header__link" [routerLink]="['']" routerLinkActive="active"
+        >გუნდები</a
+      >
+      <a class="header__link" [routerLink]="['']" routerLinkActive="active"
+        >მაღაზია</a
+      >
+    </div>
+    <div class="flex--col">
+      <div class="flex">
+        <img class="header__logo" src="../../../assets/logos/elg-logo.png" />
+        <select></select>
+      </div>
+    </div>
+  </div>
+</header>
