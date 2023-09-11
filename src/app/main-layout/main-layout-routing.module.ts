@@ -17,6 +17,13 @@ const routes: Routes = [
       { path: 'teams/:id', component: TeamInfoComponent },
     ],
   },
+  {
+    path: 'tournament-info',
+    loadChildren: () =>
+      import('./tournaments-info/tournaments-info.module').then(
+        (m) => m.TournamentsInfoModule
+      ),
+  },
 ];
 
 @NgModule({

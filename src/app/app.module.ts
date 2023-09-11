@@ -9,13 +9,14 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { InformationComponent } from './main-layout/tournaments-info/information/information.component';
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     RegisterComponent,
     LoginComponent,
+    InformationComponent,
   ],
   imports: [
     BrowserModule,

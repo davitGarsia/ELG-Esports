@@ -1,0 +1,31 @@
+@import "../../../../styles/base/typography";
+@import "../../../../styles/components/button";
+
+.check-in {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card--1 {
+  width: 30rem;
+}
+
+.flex {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.btn--lime {
+  height: 5rem;
+  border-radius: 1px;
+  margin-top: 3rem;
+  margin-left: -5rem;
+}
