@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { SharedModule } from './shared/shared.module';
+import { MatTableModule } from '@angular/material/table';
+
 //import { MainLayoutModule } from './main-layout/main-layout.module';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +25,7 @@ import { InformationComponent } from './main-layout/tournaments-info/information
     AppRoutingModule,
     SharedModule,
     ReactiveFormsModule,
+    MatTableModule,
     //  MainLayoutModule,
   ],
   providers: [],

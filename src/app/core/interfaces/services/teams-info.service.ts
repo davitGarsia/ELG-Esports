@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Teams } from '../teams.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class TeamsInfoService {
   constructor() {}
 
-  teams = [
+  teams: Teams[] = [
     {
       image: '../../../../assets/home/team.png',
       title: 'EGL TEAM',
