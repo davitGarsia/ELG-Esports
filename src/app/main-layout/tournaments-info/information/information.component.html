@@ -32,7 +32,7 @@
     </div>
     <div class="flex">
       <p class="para-xs">
-        ტურნირის დაწყებამდე დარცენილია:
+        ტურნირის დაწყებამდე დარჩენილია:
         <span class="color-main">0სთ, 30წთ.</span>
       </p>
       <button class="btn btn--lime">რეგისტრაცია</button>
@@ -42,34 +42,41 @@
 <div class="table">
   <table mat-table [dataSource]="dataSource" class="table">
     <!-- Position Column -->
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef class="paragraph">No.</th>
+    <ng-container matColumnDef="round">
+      <th mat-header-cell *matHeaderCellDef class="paragraph">რაუნდი</th>
       <td mat-cell *matCellDef="let element" class="paragraph bg">
-        {{ element.position }}
+        {{ element.round }}
       </td>
     </ng-container>
 
     <!-- Name Column -->
-    <ng-container matColumnDef="name">
+    <ng-container matColumnDef="day">
       <th mat-header-cell *matHeaderCellDef class="paragraph">Name</th>
       <td mat-cell *matCellDef="let element" class="paragraph bg">
-        {{ element.name }}
+        {{ element.day }}
       </td>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
+    <ng-container matColumnDef="time">
       <th mat-header-cell *matHeaderCellDef class="paragraph">Weight</th>
       <td mat-cell *matCellDef="let element" class="paragraph bg">
-        {{ element.weight }}
+        {{ element.time }}
       </td>
     </ng-container>
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
+    <ng-container matColumnDef="best">
       <th mat-header-cell *matHeaderCellDef class="paragraph">Symbol</th>
       <td mat-cell *matCellDef="let element" class="paragraph bg">
-        {{ element.symbol }}
+        {{ element.best }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="pass">
+      <th mat-header-cell *matHeaderCellDef class="paragraph">Symbol</th>
+      <td mat-cell *matCellDef="let element" class="paragraph bg">
+        {{ element.pass }}
       </td>
     </ng-container>
 
@@ -80,39 +87,28 @@
 
 <div class="table">
   <table mat-table [dataSource]="dataSource1" class="table">
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
+    <ng-container matColumnDef="url">
       <th mat-header-cell *matHeaderCellDef class="paragraph">No.</th>
       <td mat-cell *matCellDef="let element" class="paragraph bg">
-        {{ element.position }}
+        <img [src]="element.url" />
       </td>
     </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
+    <ng-container matColumnDef="place">
       <th mat-header-cell *matHeaderCellDef class="paragraph">Name</th>
       <td mat-cell *matCellDef="let element" class="paragraph bg">
-        {{ element.name }}
+        {{ element.place }}
       </td>
     </ng-container>
 
-    <!-- Weight Column -->
-    <ng-container matColumnDef="weight">
+    <ng-container matColumnDef="prize">
       <th mat-header-cell *matHeaderCellDef class="paragraph">Weight</th>
       <td mat-cell *matCellDef="let element" class="paragraph bg">
-        {{ element.weight }}
+        {{ element.prize }}
       </td>
     </ng-container>
 
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="symbol">
-      <th mat-header-cell *matHeaderCellDef class="paragraph">Symbol</th>
-      <td mat-cell *matCellDef="let element" class="paragraph bg">
-        {{ element.symbol }}
-      </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns1"></tr>
   </table>
 </div>

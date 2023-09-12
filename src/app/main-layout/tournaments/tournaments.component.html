@@ -1,31 +1,34 @@
 <div class="news">
   <p class="paragraph--underline">ახალი ამბები</p>
   <div class="grid">
-    <div class="card">
-      <img class="img" src="../../../assets/tournaments/image-2.png" />
+    <div class="card" *ngFor="let tournament of tournaments; let i = index">
+      <img class="img" [src]="tournament.url" />
       <div class="text">
-        <p class="heading-tertiary">
-          CS:GO <span class="color-main">ELG</span> Community Cup #1
-        </p>
+        <p class="heading-tertiary" [innerHTML]="tournament.name"></p>
         <p class="paragraph"><span class="color-main">ELG</span> CS:GO</p>
       </div>
       <div class="flex--col">
         <p class="paragraph">საპრიზო თანხა</p>
         <div class="flex">
-          <img src="../../../assets/home/trophy-solid.png" />
+          <img [src]="tournament.imgUrl" />
           <p class="paragraph">150₾</p>
         </div>
       </div>
-      <button class="btn btn--transparent">მეტის ნახვა</button>
+      <button
+        class="btn btn--transparent"
+        [routerLink]="['/main/tournament-info/information', i]"
+      >
+        მეტის ნახვა
+      </button>
     </div>
 
-    <div class="card">
+    <!-- <div class="card">
       <img class="img" src="../../../assets/tournaments/image-2.png" />
       <div class="text">
         <p class="heading-tertiary">
           CS:GO <span class="color-main">ELG</span> Community Cup #1
         </p>
-        <p class="paragraph">class="color-main">5 აგვისტო | 21:00 +5</p>
+        <p class="paragraph">5 აგვისტო | 21:00 +5</p>
       </div>
       <div class="flex--col">
         <p class="paragraph">საპრიზო თანხა</p>
@@ -44,7 +47,7 @@
           CS:GO <span class="color-main">ELG</span> APEX LEGENDS ELG Community
           Cup #1
         </p>
-        <p class="paragraph">class="color-main">5 აგვისტო | 21:00 +5</p>
+        <p class="paragraph">5 აგვისტო | 21:00 +5</p>
       </div>
       <div class="flex--col">
         <p class="paragraph">საპრიზო თანხა</p>
@@ -63,7 +66,7 @@
           CS:GO <span class="color-main">ELG</span> APEX LEGENDS ELG Community
           Cup #1
         </p>
-        <p class="paragraph">class="color-main">5 აგვისტო | 21:00 +5</p>
+        <p class="paragraph">5 აგვისტო | 21:00 +5</p>
       </div>
       <div class="flex--col">
         <p class="paragraph">საპრიზო თანხა</p>
@@ -82,7 +85,7 @@
           CS:GO <span class="color-main">ELG</span> APEX LEGENDS ELG Community
           Cup #1
         </p>
-        <p class="paragraph">class="color-main">5 აგვისტო | 21:00 +5</p>
+        <p class="paragraph">5 აგვისტო | 21:00 +5</p>
       </div>
       <div class="flex--col">
         <p class="paragraph">საპრიზო თანხა</p>
@@ -110,6 +113,6 @@
         </div>
       </div>
       <button class="btn btn--transparent">მეტის ნახვა</button>
-    </div>
+    </div> -->
   </div>
 </div>

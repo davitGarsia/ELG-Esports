@@ -12,6 +12,10 @@ const routes: Routes = [
         path: 'information',
         component: InformationComponent,
       },
+      {
+        path: 'information/:id',
+        component: InformationComponent,
+      },
     ],
   },
 ];
