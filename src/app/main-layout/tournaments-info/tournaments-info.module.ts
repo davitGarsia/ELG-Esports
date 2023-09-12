@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { MatTableModule } from '@angular/material/table';
+import { TournamentTeamsComponent } from './tournament-teams/tournament-teams.component';
 
 import { TournamentsInfoRoutingModule } from './tournaments-info-routing.module';
 
 @NgModule({
-  declarations: [],
+  declarations: [TournamentTeamsComponent],
   imports: [
     CommonModule,
     TournamentsInfoRoutingModule,

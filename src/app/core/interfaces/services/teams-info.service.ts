@@ -7,6 +7,17 @@ import { Teams } from '../teams.interface';
 export class TeamsInfoService {
   constructor() {}
 
+  getData() {
+    return this.teams;
+  }
+
+  getTeams(pageNumber: number, pageSize: number): any[] {
+    const startIndex = (pageNumber - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+
+    return this.teams.slice(startIndex, endIndex);
+  }
+
   teams: Teams[] = [
     {
       image: '../../../../assets/home/team.png',

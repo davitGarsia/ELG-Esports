@@ -12,7 +12,6 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InformationComponent } from './main-layout/tournaments-info/information/information.component';
-import { TeamsComponent } from './main-layout/tournaments-info/teams/teams.component';
 import { SettingsComponent } from './profile/settings/settings.component';
 @NgModule({
   declarations: [
@@ -21,7 +20,7 @@ import { SettingsComponent } from './profile/settings/settings.component';
     RegisterComponent,
     LoginComponent,
     InformationComponent,
-    TeamsComponent,
+
     SettingsComponent,
   ],
   imports: [

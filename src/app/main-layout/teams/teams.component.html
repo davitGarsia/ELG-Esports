@@ -11,5 +11,22 @@
     </div>
   </div>
 </div>
+<div class="pagination">
+  <button
+    *ngFor="let page of getPageNumbers()"
+    [class.active]="page === currentPage"
+    (click)="onPageChange(page)"
+  >
+    {{ page }}
+  </button>
+  <app-footer></app-footer>
 
-<app-footer></app-footer>
+  <!-- <div class="card" *ngFor="let team of teams; let i = index">
+  <img class="img" [src]="team.image" />
+  <p class="paragraph">{{ team.title }}</p>
+  <p class="para-sm">{{ team.numMembers }}</p>
+  <button class="btn btn--transparent" [routerLink]="['/main/teams', i]">
+    გუნდის ნახვა
+  </button>
+</div> -->
+</div>
