@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TournamentInfoComponent } from './tournament-info/tournament-info.component';
 import { InformationComponent } from './information/information.component';
+import { TeamsComponent } from './teams/teams.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,10 @@ const routes: Routes = [
       {
         path: 'information/:id',
         component: InformationComponent,
+      },
+      {
+        path: 'teams',
+        component: TeamsComponent,
       },
     ],
   },

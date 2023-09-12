@@ -1,0 +1,11 @@
+@import "../../../styles/components/form-input";
+
+.form__container {
+  display: flex;
+  gap: 5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}

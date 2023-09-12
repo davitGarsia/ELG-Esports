@@ -1,0 +1,42 @@
+@import "../../../../styles/abstracts/variables";
+@import "../../../../styles/components/button";
+@import "../../../../styles/components/paragraph-underline";
+@import "../../../../styles/base/typography";
+
+.grid {
+  display: grid;
+  row-gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.teams {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.img {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+.btn {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.para-sm {
+  color: $color-white;
+  font-size: 1rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -25,6 +25,13 @@ const routes: Routes = [
         (m) => m.MainLayoutModule
       ),
   },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('../app/profile/profile.module').then(
+        (m) => m.ProfileModule
+      ),
+  },
 ];
 
 @NgModule({
