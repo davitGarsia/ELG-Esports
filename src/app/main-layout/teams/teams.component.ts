@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamsInfoService } from 'src/app/core/interfaces/services/teams-info.service';
-
 @Component({
   selector: 'app-teams',
   templateUrl: './teams.component.html',

@@ -1,9 +1,14 @@
 <div class="form__container">
   <div class="form__container--1">
     <form class="form">
-      <input class="form__input" placeholder="ძველი პაროლი" />
-      <input class="form__input" placeholder="ახალი პაროლი" />
-      <input class="form__input" placeholder="ახალი პაროლი" />
+      <img class="user-image" [src]="image" />
+      <label for="file-upload" class="custom-file-upload"> ფოტოს შეცვლა </label>
+      <input
+        id="file-upload"
+        class="image--input"
+        type="file"
+        (change)="previewFiles($event)"
+      />
     </form>
   </div>
   <div class="form__container--2">
@@ -11,6 +16,10 @@
       <input class="form__input" placeholder="ძველი პაროლი" />
       <input class="form__input" placeholder="ახალი პაროლი" />
       <input class="form__input" placeholder="ახალი პაროლი" />
+      <div class="flex">
+        <button class="btn btn--transparent btn--red">დარესეტება</button>
+        <button class="btn btn--transparent btn--lime">შენახვა</button>
+      </div>
     </form>
   </div>
   <div class="form__container--3">
@@ -24,6 +33,10 @@
       <input class="form__input" placeholder="TWITCH ლინკი" />
       <input class="form__input" placeholder="Youtube ლინკი" />
       <input class="form__input" placeholder="Facebook ლინკი" />
+      <div class="flex">
+        <button class="btn btn--transparent btn--red">დარესეტება</button>
+        <button class="btn btn--transparent btn--lime">შენახვა</button>
+      </div>
     </form>
   </div>
 </div>

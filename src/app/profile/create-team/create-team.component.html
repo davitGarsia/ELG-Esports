@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="flex">
+    <img class="logo" src="../../../assets/logos/elg-logo.png" />
+    <img class="user-image" [src]="image" />
+    <form class="form">
+      <div class="photo">
+        <label for="file-upload" class="custom-file-upload">
+          ატვირთე ფოტო ლოგო
+        </label>
+      </div>
+
+      <input
+        id="file-upload"
+        class="image--input"
+        type="file"
+        (change)="previewFiles($event)"
+      />
+    </form>
+    <p>გუნდის ლოგოს მინიმალური ზომებია 512px 512px-ზე</p>
+    <p>ფორმატი მხოლოდ<span class="main--color">.png</span></p>
+
+    <form class="form" [formGroup]="userForm" (submit)="ngSubmit()">
+      <label class="label">გუნდის სახელი</label>
+      <input class="form__input" />
+      <label class="label">გუნდის მოკლე სახელი</label>
+      <input class="form__input" />
+      <button class="btn btn--lime">გუნდის შექმნა</button>
+    </form>
+  </div>
+</div>

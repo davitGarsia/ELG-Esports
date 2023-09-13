@@ -1,12 +1,13 @@
 @import "../../../styles/abstracts/variables";
 
 .header {
+  width: 90vw;
   margin: 1.5% 3% 0% 7%;
 }
 
 .header__flex {
   display: flex;
-  gap: 70%;
+  justify-content: space-between;
 }
 
 .flex {
@@ -39,4 +40,19 @@
   background-color: $color-primary;
   transform: skewX(-15deg);
   padding: 1rem 2rem 1rem 2rem;
+}
+
+.user--image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.select {
+  width: 3rem;
+  height: 3rem;
+  outline: none;
+  border: none;
+  background-color: $color-grey-dark-2;
+  border-radius: 50%;
 }
