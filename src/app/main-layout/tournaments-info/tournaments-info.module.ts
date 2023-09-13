@@ -6,9 +6,10 @@ import { MatTableModule } from '@angular/material/table';
 import { TournamentTeamsComponent } from './tournament-teams/tournament-teams.component';
 
 import { TournamentsInfoRoutingModule } from './tournaments-info-routing.module';
+import { RulesComponent } from './rules/rules.component';
 
 @NgModule({
-  declarations: [TournamentTeamsComponent],
+  declarations: [TournamentTeamsComponent, RulesComponent],
   imports: [
     CommonModule,
     TournamentsInfoRoutingModule,

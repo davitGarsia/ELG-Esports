@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { TournamentInfoComponent } from './tournament-info/tournament-info.component';
 import { InformationComponent } from './information/information.component';
 import { TournamentTeamsComponent } from './tournament-teams/tournament-teams.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { RulesComponent } from './rules/rules.component';
 
 const routes: Routes = [
   {
@@ -20,6 +22,14 @@ const routes: Routes = [
       {
         path: 'teams',
         component: TournamentTeamsComponent,
+      },
+      {
+        path: 'leaderBoard',
+        component: LeaderboardComponent,
+      },
+      {
+        path: 'rules',
+        component: RulesComponent,
       },
     ],
   },

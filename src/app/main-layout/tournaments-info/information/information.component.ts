@@ -13,6 +13,9 @@ export class InformationComponent implements OnInit {
     private tournamentService: TournamentInfoService
   ) {}
 
+  // Goes here when you click
+  // see more in tournaments
+
   timetable: any = [];
   dataSource: any = [];
   dataSource1: any = [];
