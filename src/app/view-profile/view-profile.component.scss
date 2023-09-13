@@ -1,0 +1,15 @@
+@import "../../styles/abstracts/variables";
+@import "../../styles/components/button";
+@import "../../styles/base/typography";
+
+.user {
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+}

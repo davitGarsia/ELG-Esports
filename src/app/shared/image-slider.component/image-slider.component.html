@@ -24,18 +24,24 @@
         დაარეგისტრირე საკუთარი გუნდი საიტზე, დააყენე სასურველი ლოგო და შეუერთდი
         ტურნირებს.
       </p>
-      <div class="landing__content--buttons">
-        <button
-          class="btn btn--transparent"
-          (click)="toLogin()"
-          routerLinkActive="router-link-active"
-        >
-          ავტორიზაცია
-        </button>
-        <button class="btn btn--lime" (click)="toRegister()">
-          რეგისტრაცია
-        </button>
-      </div>
+      <ng-container *ngIf="!loggedIn">
+        <div class="landing__content--buttons">
+          <button
+            class="btn btn--transparent"
+            (click)="toLogin()"
+            routerLinkActive="router-link-active"
+          >
+            ავტორიზაცია
+          </button>
+          <button class="btn btn--lime" (click)="toRegister()">
+            რეგისტრაცია
+          </button>
+        </div>
+      </ng-container>
+
+      <ng-container *ngIf="loggedIn">
+        <button class="btn btn--lime">გუნდის შექმნა</button>
+      </ng-container>
     </div>
     <div class="landing__content--tournaments">
       <img

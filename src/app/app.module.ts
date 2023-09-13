@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { InformationComponent } from './main-layout/tournaments-info/information/information.component';
 import { LeaderboardComponent } from './main-layout/tournaments-info/leaderboard/leaderboard.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { LeaderboardComponent } from './main-layout/tournaments-info/leaderboard
     LoginComponent,
     InformationComponent,
     LeaderboardComponent,
+    ViewProfileComponent,
   ],
   imports: [
     BrowserModule,

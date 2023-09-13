@@ -9,6 +9,7 @@ import { TeamsComponent } from './teams/teams.component';
 import { TournamentsComponent } from './tournaments/tournaments.component';
 import { TeamInfoComponent } from './team-info/team-info.component';
 import { TournamentInfoComponent } from './tournaments-info/tournament-info/tournament-info.component';
+import { ShopComponent } from './shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TournamentInfoComponent } from './tournaments-info/tournament-info/tour
     TournamentInfoComponent,
     TeamsComponent,
     TeamInfoComponent,
+    ShopComponent,
   ],
   imports: [CommonModule, MainLayoutRoutingModule, SharedModule],
 })

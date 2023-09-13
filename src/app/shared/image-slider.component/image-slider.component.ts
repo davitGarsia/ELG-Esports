@@ -2,6 +2,7 @@ import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { SlideInterface } from '../../core/interfaces/slide.interface';
 import { Subject, Subscription, interval, take, takeUntil } from 'rxjs';
 import { Router } from '@angular/router';
+import { LoggingService } from 'src/app/core/interfaces/services/logging.service';
 
 @Component({
   selector: 'app-image-slider',
@@ -9,7 +10,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./image-slider.component.scss'],
 })
 export class ImageSliderComponent implements OnInit, OnDestroy {
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private loggedInService: LoggingService
+  ) {}
+
+  loggedIn: any;
 
   @Input() slides!: string[];
 
@@ -39,6 +45,8 @@ export class ImageSliderComponent implements OnInit, OnDestroy {
     // timer.pipe(takeUntil(this.sub$)).subscribe(() => {
     //   this.goToNextSlide();
     // });
+
+    this.loggedInService.loggedIn$.subscribe((log) => (this.loggedIn = log));
     console.log(this.slides);
   }
   goToNextSlide(): void {

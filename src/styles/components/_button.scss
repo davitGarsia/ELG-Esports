@@ -44,6 +44,22 @@
     border-radius: 1px;
   }
 
+  &--grey {
+    background-color: $color-grey-dark-2;
+    color: $color-white;
+    height: 5rem;
+    width: 20rem;
+    border-radius: 1px;
+  }
+
+  &--bluish {
+    background-color: $color-bluish;
+    color: $color-white;
+    height: 5rem;
+    width: 20rem;
+    border-radius: 1px;
+  }
+
   &--transparent {
     padding: 1.2rem 4.4rem;
     background-color: transparent;

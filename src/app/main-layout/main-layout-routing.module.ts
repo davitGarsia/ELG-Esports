@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { TournamentsComponent } from './tournaments/tournaments.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TeamInfoComponent } from './team-info/team-info.component';
+import { ShopComponent } from './shop/shop.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'tournaments', component: TournamentsComponent },
       { path: 'teams', component: TeamsComponent },
       { path: 'teams/:id', component: TeamInfoComponent },
+      { path: 'shop', component: ShopComponent },
     ],
   },
   {
