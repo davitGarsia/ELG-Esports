@@ -7,6 +7,7 @@ import { Teams } from '../teams.interface';
 export class TeamsInfoService {
   constructor() {}
 
+  // contributes to pagination
   getData() {
     return this.teams;
   }

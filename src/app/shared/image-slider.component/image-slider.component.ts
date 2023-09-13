@@ -19,15 +19,6 @@ export class ImageSliderComponent implements OnInit, OnDestroy {
 
   @Input() slides!: string[];
 
-  // slides: SlideInterface[] = [
-  //   {
-  //     url: '../../assets/slider-images/slider-1.png',
-  //     title: 'slider-1',
-  //   },
-  //   { url: '../../assets/slider-images/slider-2.png', title: 'slider-2' },
-  //   { url: '../../assets/slider-images/slider-3.png', title: 'slider-3' },
-  // ];
-
   currentIndex: number = 0;
   sub$ = new Subject();
 
@@ -40,14 +31,13 @@ export class ImageSliderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    // Call goToSlide every 2 seconds
-    // const timer = interval(3000);
-    // timer.pipe(takeUntil(this.sub$)).subscribe(() => {
-    //   this.goToNextSlide();
-    // });
+    // Call goToSlide every 3 seconds
+    const timer = interval(3000);
+    timer.pipe(takeUntil(this.sub$)).subscribe(() => {
+      this.goToNextSlide();
+    });
 
     this.loggedInService.loggedIn$.subscribe((log) => (this.loggedIn = log));
-    console.log(this.slides);
   }
   goToNextSlide(): void {
     this.currentIndex = (this.currentIndex + 1) % this.slides.length;

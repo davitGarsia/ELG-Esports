@@ -5,6 +5,9 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class UserInfoService {
+  // getting user image from file input
+  // and saving it as Base64 string
+
   private imageSubject = new BehaviorSubject<string>(''); // Initialize with an empty string
   public image$ = this.imageSubject.asObservable();
 

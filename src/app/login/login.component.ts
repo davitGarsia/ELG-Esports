@@ -19,6 +19,8 @@ export class LoginComponent {
   });
 
   onSubmit() {
+    // sets loggingService value to true
+    // while navigating to home page
     this.loginFormGroup.markAllAsTouched();
     this.router.navigate(['/main/home']);
     this.loggingService.loggedIn.next(true);

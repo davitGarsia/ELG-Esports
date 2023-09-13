@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { UserInfoService } from 'src/app/core/interfaces/services/user-info.service';
+import { takeUntil, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss'],
 })
-export class SettingsComponent {
+export class SettingsComponent implements OnDestroy {
   constructor(private userInfoService: UserInfoService) {}
+  sub$ = new Subject();
 
   image = '../../../assets/home/team.png';
 
@@ -20,22 +22,18 @@ export class SettingsComponent {
         this.userInfoService.setImage(imageData);
       });
 
+      // using rxjs takeUntil operator
+      // to unsubscribe when the component is
+      // destroyed
       reader.readAsDataURL(event.target.files[0]);
-      this.userInfoService.image$.subscribe((image) => (this.image = image));
+      this.userInfoService.image$
+        .pipe(takeUntil(this.sub$))
+        .subscribe((image) => (this.image = image));
     }
   }
 
-  // previewFiles(event: any) {
-  //   const reader: any = new FileReader();
-
-  //   reader.addEventListener('load', () => {
-  //     const imageData = reader.result as string;
-  //     this.userInfoService.setImage(imageData);
-  //   });
-
-  //   if (event.target.files && event.target.files.length > 0) {
-  //     reader.readAsDataURL(event.target.files[0]);
-  //   }
-  //   console.log(reader.readAsDataURL(event.target.files[0]));
-  // }
+  ngOnDestroy() {
+    this.sub$.next(null);
+    this.sub$.complete();
+  }
 }

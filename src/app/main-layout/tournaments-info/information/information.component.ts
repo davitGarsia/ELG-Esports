@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Route } from '@angular/router';
+import { Subject } from 'rxjs';
 import { TournamentInfoService } from 'src/app/core/interfaces/services/tournament-info.service';
 
 @Component({
@@ -13,8 +14,12 @@ export class InformationComponent implements OnInit {
     private tournamentService: TournamentInfoService
   ) {}
 
+  sub$ = new Subject();
+
   // Goes here when you click
   // see more in tournaments
+  // and displays the table with the
+  // respective data
 
   timetable: any = [];
   dataSource: any = [];
