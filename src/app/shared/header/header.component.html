@@ -38,7 +38,11 @@
     <div class="flex--col">
       <div class="flex">
         <img class="user--image" [src]="image" />
-        <select class="select"></select>
+        <select class="select" (change)="onSelectChange($event)">
+          <option disabled selected style="display: none"></option>
+          <option value="profile">profile</option>
+          <option value="logout">log out</option>
+        </select>
       </div>
     </div>
   </div>
