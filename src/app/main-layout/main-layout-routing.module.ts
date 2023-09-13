@@ -6,6 +6,7 @@ import { TournamentsComponent } from './tournaments/tournaments.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TeamInfoComponent } from './team-info/team-info.component';
 import { ShopComponent } from './shop/shop.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'teams', component: TeamsComponent },
       { path: 'teams/:id', component: TeamInfoComponent },
       { path: 'shop', component: ShopComponent },
+      { path: 'schedule', component: ScheduleComponent },
     ],
   },
   {

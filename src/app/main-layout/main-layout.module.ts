@@ -10,6 +10,7 @@ import { TournamentsComponent } from './tournaments/tournaments.component';
 import { TeamInfoComponent } from './team-info/team-info.component';
 import { TournamentInfoComponent } from './tournaments-info/tournament-info/tournament-info.component';
 import { ShopComponent } from './shop/shop.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ShopComponent } from './shop/shop.component';
     TeamsComponent,
     TeamInfoComponent,
     ShopComponent,
+    ScheduleComponent,
   ],
   imports: [CommonModule, MainLayoutRoutingModule, SharedModule],
 })
