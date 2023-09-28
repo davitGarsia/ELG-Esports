@@ -11,15 +11,14 @@
     </div>
   </div>
 </div>
-<div class="pagination">
-  <button
-    class="btn btn--blue"
-    *ngFor="let page of getPageNumbers()"
-    [class.active]="page === currentPage"
-    (click)="onPageChange(page)"
-  >
-    {{ page }}
-  </button>
+
+  <div class="pagination">
+    <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+    <ng-container *ngFor="let page of paginationButtons">
+      <button (click)="onPageChange(page)" [class.active]="currentPage === page">{{ page }}</button>
+    </ng-container>
+    <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+  </div>
   <app-footer></app-footer>
 
   <!-- <div class="card" *ngFor="let team of teams; let i = index">
@@ -30,4 +29,4 @@
     გუნდის ნახვა
   </button>
 </div> -->
-</div>
+

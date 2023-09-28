@@ -13,26 +13,39 @@ export class TeamsComponent implements OnInit {
   currentPage: number = 1;
   pageSize: number = 10;
   totalItems!: number;
+  totalPages = 1;
+  paginationButtons: number[] = [];
 
   teams!: any[];
 
   ngOnInit(): void {
     // this.teams = this.teamsService.teams;
-    this.loadData();
+    this.totalPages = this.calculateTotalPages();
+    this.loadTeamsPage(this.currentPage);
+    this.generatePaginationButtons();
   }
 
-  loadData() {
-    this.totalItems = this.teamsService.getData().length;
-    this.teams = this.teamsService.getTeams(this.currentPage, this.pageSize);
+  calculateTotalPages(): number {
+    return Math.ceil(this.teamsService.getAllTeams().length / this.pageSize);
   }
 
-  onPageChange(page: number) {
-    this.currentPage = page;
-    this.loadData();
+  loadTeamsPage(pageNumber: number): void {
+    this.teams = this.teamsService.getTeamsPage(pageNumber, this.pageSize);
   }
 
-  getPageNumbers(): number[] {
-    const totalPages = Math.ceil(this.totalItems / this.pageSize);
-    return Array.from({ length: totalPages }, (_, index) => index + 1);
+  onPageChange(pageNumber: number): void {
+    if (pageNumber >= 1 && pageNumber <= this.totalPages) {
+      this.currentPage = pageNumber;
+      this.loadTeamsPage(this.currentPage);
+      this.generatePaginationButtons();
+    }
+  }
+
+  generatePaginationButtons(): void {
+    const halfButtonsToShow = Math.floor(5 / 2);
+    const startPage = Math.max(1, this.currentPage - halfButtonsToShow);
+    const endPage = Math.min(startPage + 4, this.totalPages);
+
+    this.paginationButtons = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
   }
 }
