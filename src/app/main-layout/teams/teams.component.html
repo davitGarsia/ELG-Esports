@@ -13,11 +13,11 @@
 </div>
 
   <div class="pagination">
-    <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+    <button class="btn btn--bluish" (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
     <ng-container *ngFor="let page of paginationButtons">
-      <button (click)="onPageChange(page)" [class.active]="currentPage === page">{{ page }}</button>
+      <button class="btn btn--bluish" (click)="onPageChange(page)" [class.active]="currentPage === page">{{ page }}</button>
     </ng-container>
-    <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+    <button class="btn btn--bluish" (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
   </div>
   <app-footer></app-footer>
 

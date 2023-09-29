@@ -12,7 +12,7 @@ export class TeamsComponent implements OnInit {
 
   currentPage: number = 1;
   pageSize: number = 10;
-  totalItems!: number;
+  //totalItems!: number;
   totalPages = 1;
   paginationButtons: number[] = [];
 
@@ -36,16 +36,19 @@ export class TeamsComponent implements OnInit {
   onPageChange(pageNumber: number): void {
     if (pageNumber >= 1 && pageNumber <= this.totalPages) {
       this.currentPage = pageNumber;
+      //console.log(this.currentPage)
       this.loadTeamsPage(this.currentPage);
       this.generatePaginationButtons();
     }
   }
 
+
   generatePaginationButtons(): void {
     const halfButtonsToShow = Math.floor(5 / 2);
     const startPage = Math.max(1, this.currentPage - halfButtonsToShow);
-    const endPage = Math.min(startPage + 4, this.totalPages);
+    const endPage = Math.min(startPage + 4, this.totalPages); // * Because we only show 5 pages, thus startPage + 4
 
     this.paginationButtons = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
+    console.log(this.paginationButtons);
   }
 }
